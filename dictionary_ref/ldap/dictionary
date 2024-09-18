@@ -1,0 +1,16 @@
+# -*- text -*-
+# Copyright (C) 2022 The FreeRADIUS Server project and contributors
+# This work is licensed under CC-BY version 4.0 https://creativecommons.org/licenses/by/4.0
+# Version $Id: 73b2832e9384064103ce19ff1e8fce1e19b26e3c $
+#
+#	The FreeRADIUS dictionary for LDAP Sync
+#
+# Version:	$Id: 73b2832e9384064103ce19ff1e8fce1e19b26e3c $
+#
+
+PROTOCOL	LDAP		12
+BEGIN-PROTOCOL	LDAP
+
+$INCLUDE dictionary.freeradius.internal
+
+END-PROTOCOL	LDAP

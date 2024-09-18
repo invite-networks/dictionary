@@ -1,0 +1,17 @@
+# -*- text -*-
+# Copyright (C) 2022 The FreeRADIUS Server project and contributors
+# This work is licensed under CC-BY version 4.0 https://creativecommons.org/licenses/by/4.0
+# Version $Id: 0a54139dd5e3785ddf6f54bedf813c8275bda34f $
+#
+#	The FreeRADIUS dictionary for DNS
+#
+# Version:	$Id: 0a54139dd5e3785ddf6f54bedf813c8275bda34f $
+#
+
+PROTOCOL	DNS		11	format=2
+BEGIN-PROTOCOL	DNS
+
+$INCLUDE dictionary.freeradius.internal
+$INCLUDE dictionary.rfc1034
+
+END-PROTOCOL	DNS

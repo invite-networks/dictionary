@@ -1,2 +1,2 @@
-# dictionary
-Radius Dictionary Files
+# Radius Dictionary
+This is a collection of FreeRadius Dictionary files.
