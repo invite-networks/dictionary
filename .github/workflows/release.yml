@@ -34,6 +34,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git checkout ${{ env.BRANCH_NAME }}  # Checkout the branch associated with the tag
+          rm -f version
           echo "${{ env.TAG_NAME }}" > version
           git add version
           git commit -m "Update version to ${{ env.TAG_NAME }}"
