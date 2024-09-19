@@ -12,7 +12,7 @@ jobs:
     steps:
       # Checkout the repository with history to access branch information
       - name: Checkout repository
-        uses: actions/checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Fetch full history to find branch
 
