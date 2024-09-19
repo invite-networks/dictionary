@@ -41,8 +41,6 @@ jobs:
       # Commit the updated version file
       - name: Commit updated version file
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git checkout ${{ env.BRANCH_NAME }}  # Checkout the branch associated with the tag
           git add version
           git commit -m "Update version to ${{ env.TAG_NAME }}"
