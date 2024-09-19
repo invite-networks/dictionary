@@ -3,7 +3,7 @@ name: Release on tag
 on:
   push:
     tags:
-      - '*'
+      - "v*.*.*"
 
 jobs:
   release:
@@ -46,7 +46,7 @@ jobs:
 
       # Create a release
       - name: Create GitHub release
-        uses: softprops/action-gh-release
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.TAG_NAME }}
         env:
