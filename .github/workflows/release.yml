@@ -44,10 +44,3 @@ jobs:
           git commit -m "Update version to ${{ env.TAG_NAME }}"
           git push origin ${{ env.BRANCH_NAME }}
 
-      # Create a release
-      - name: Create GitHub release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ env.TAG_NAME }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
