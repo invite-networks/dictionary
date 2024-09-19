@@ -16,12 +16,6 @@ jobs:
         with:
           fetch-depth: 0  # Fetch full history to find branch
 
-      # Set up Rust
-      - name: Set up Rust
-        uses: actions-rs/toolchain
-        with:
-          toolchain: stable
-
       # Get the version tag from the Git ref
       - name: Extract tag version
         id: extract_tag
