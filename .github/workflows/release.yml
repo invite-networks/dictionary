@@ -12,13 +12,13 @@ jobs:
     steps:
       # Checkout the repository with history to access branch information
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout
         with:
           fetch-depth: 0  # Fetch full history to find branch
 
       # Set up Rust
       - name: Set up Rust
-        uses: actions-rs/toolchain@v1
+        uses: actions-rs/toolchain
         with:
           toolchain: stable
 
@@ -48,7 +48,7 @@ jobs:
 
       # Create a release
       - name: Create GitHub release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release
         with:
           tag_name: ${{ env.TAG_NAME }}
         env:
