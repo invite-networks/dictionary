@@ -34,6 +34,10 @@ jobs:
           BRANCH=$(git branch -r --contains $GITHUB_SHA | grep -v '\->' | sed -n 1p | sed 's/.*origin\///')
           echo "BRANCH_NAME=$BRANCH" >> $GITHUB_ENV
 
+      # Delete the 'version' file before switching branches
+      - name: Delete version file
+        run: rm -f version
+
       # Update the 'version' file with the new tag
       - name: Update version file
         run: echo "${{ env.TAG_NAME }}" > version
